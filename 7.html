@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Level Table of Contents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .toc {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .toc > li {
+            margin: 0;
+            padding: 0;
+        }
+        .toc ul {
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        .toc li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .toc li::before {
+            content: "• ";
+            color: #333;
+        }
+        .toc li a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .toc li a:hover {
+            text-decoration: underline;
+        }
+        .toc li span {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Table of Contents</h1>
+    <ul class="toc">
+        <li><a href="#section1">Section 1</a>
+            <ul>
+                <li><a href="#section1.1">Section 1.1</a></li>
+                <li><a href="#section1.2">Section 1.2</a>
+                    <ul>
+                        <li><a href="#section1.2.1">Section 1.2.1</a></li>
+                        <li><a href="#section1.2.2">Section 1.2.2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a>
+            <ul>
+                <li><a href="#section3.1">Section 3.1</a></li>
+                <li><a href="#section3.2">Section 3.2</a>
+                    <ul>
+                        <li><a href="#section3.2.1">Section 3.2.1</a></li>
+                        <li><a href="#section3.2.2">Section 3.2.2</a>
+                            <ul>
+                                <li><a href="#section3.2.2.1">Section 3.2.2.1</a></li>
+                                <li><a href="#section3.2.2.2">Section 3.2.2.2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+</html>
